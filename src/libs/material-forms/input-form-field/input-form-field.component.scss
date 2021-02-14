@@ -1,0 +1,28 @@
+@import "../form-field";
+@import "../../../styles/_base/variables";
+
+@include custom-form-error();
+::ng-deep {
+	@include custom-form();
+}
+
+mat-form-field {
+	@include custom-form-box();
+	::ng-deep {
+		.mat-form-field-underline {
+			width: 0;
+		}
+	}
+}
+
+.doubleField {
+	border: none;
+}
+
+.label-error {
+	color: $custom-error-color !important;
+}
+
+.no-wrap {
+	white-space: nowrap;
+}

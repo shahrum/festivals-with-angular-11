@@ -1,0 +1,41 @@
+<mat-form-field
+	[color]="color"
+	[appearance]="appearance"
+	[floatLabel]="floatLabel"
+	[ngClass]="{
+		doubleField: doubleField,
+		hasError: __hasError
+	}"
+>
+	<mat-label
+		[innerHtml]="label"
+		[ngClass]="{
+			'label-error': __hasError
+		}"
+	></mat-label>
+	<input
+		*ngIf="!disablePasteInto"
+		matInput
+		[formControl]="_control"
+		[placeholder]="placeholder"
+		(keypress)="_keyRestrictionFunction($event)"
+		(blur)="_runReplacement()"
+		[required]="required"
+		[maxlength]="maxLength > 0 ? maxLength : 0"
+		[type]="inputType"
+		[ngClass]="{
+			inputIsWrong: __hasError
+		}"
+	/>
+	<mat-hint [innerHtml]="hint ? hint : ''"></mat-hint>
+	<mat-error
+		[innerHtml]="error"
+		[ngClass]="{ 'no-wrap': noWrap }"
+	></mat-error>
+	<mat-spinner
+		*ngIf="_status === 'PENDING'"
+		[diameter]="18"
+		[strokeWidth]="3"
+	></mat-spinner>
+	<img *ngIf="showImage" class="valid-tick" [src]="imageUrl" />
+</mat-form-field>

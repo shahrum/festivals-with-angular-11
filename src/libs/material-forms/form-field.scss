@@ -1,0 +1,113 @@
+@import "../../styles/_base/variables";
+:host {
+	width: 100%;
+	display: block;
+
+	mat-form-field {
+		width: 100%;
+		line-height: inherit;
+		font-family: $form-field-font-family;
+	}
+
+	img.valid-tick {
+		position: absolute;
+		right: 0;
+		top: 20%;
+		margin-top: -6px;
+	}
+
+	mat-spinner {
+		position: absolute;
+		right: 0;
+		bottom: 5px;
+	}
+}
+
+@mixin custom-form {
+	.mat-form-field-appearance-fill .mat-form-field-flex {
+		background-color: #ffffff;
+		padding-top: 0 !important;
+	}
+
+	.mat-form-field-wrapper {
+		padding-bottom: 0;
+	}
+
+	.mat-form-field-underline {
+		width: 0;
+	}
+
+	.mat-form-field-subscript-wrapper {
+		top: 44px;
+	}
+
+	.mat-form-field-infix {
+		padding-bottom: 0 !important;
+		padding-top: 0.5em !important;
+
+		mat-label {
+			color: #8d8d8d;
+		}
+	}
+
+	::ng-deep {
+		.mat-form-field.mat-focused.mat-form-field-label {
+			color: $custom-form-label-color;
+		}
+
+		.mat-placeholder-required.mat-form-field-required-marker {
+			display: none !important;
+		}
+	}
+}
+
+@mixin custom-form-box {
+	border: 1px solid #c5c6c8;
+	border-radius: 3px;
+	margin-bottom: 22px;
+	box-shadow: 0 4px 8px 0 rgba(36, 7, 52, 0.1);
+	padding: 1px;
+}
+
+@mixin custom-form-error {
+	.mat-form-field-flex {
+		background-color: none;
+	}
+	.hasError {
+		border-color: $custom-error-color;
+	}
+
+	.inputIsWrong {
+		color: $custom-error-color;
+	}
+}
+
+@mixin custom-trigger-select {
+	.mat-select-arrow {
+		border-top: 2px solid transparent !important;
+
+		margin: 0 10px !important;
+	}
+
+	.mat-select-arrow:before,
+	.mat-select-arrow:after {
+		content: "";
+		position: absolute;
+		top: 19px;
+		width: 12px;
+		border: 1px solid #470a68;
+		transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+	}
+
+	.mat-select-arrow:before {
+		transform: rotateZ(40deg);
+		-webkit-transform: rotateZ(40deg);
+		left: 1px;
+	}
+	.mat-select-arrow:after {
+		transform: rotateZ(-40deg);
+		-webkit-transform: rotateZ(-40deg);
+		left: 9px;
+	}
+}
