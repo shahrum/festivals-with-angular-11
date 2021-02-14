@@ -1,0 +1,39 @@
+
+<div class="festival-container">
+    <button (click)="_fetchFestivals()" class="btn btn-primary" type="button" [disabled]="_loading">
+        {{_loading ? 'Fetching...' : 'Fetch Festivals'}}
+        <span *ngIf="_loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    </button>
+    <ng-container *ngIf="(_festivals| json) != ({} | json)">
+        <form [formGroup]="_form">
+            <tc-input-form-field
+                controlName="search"
+                autocapitalize="words"
+                [required]="false"
+                [errorFn]="_handleNameErr"
+                [replacementMap]="_replacementMap"
+                [maxLength]="23"
+            ></tc-input-form-field>
+        </form>
+        <div>
+            <ul>
+                <li  *ngFor="let item of _festivals | keyvalue">
+                    {{item.key | capitalizeEachWord}}
+                    <ul *ngIf="item?.value">
+                        <li *ngFor="let bands of getItemValue(item)">
+                            {{bands?.name | capitalizeEachWord}}
+                            <ul *ngIf="bands.festivalName">
+                                <li>{{bands.festivalName | capitalizeEachWord}}</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </ng-container>
+    <ng-container  #no_content>
+        <div *ngIf="!_loading" class="alert alert-warning" role="alert">
+            No festivals to display! please click on fetch festivals to fetch again.
+        </div>
+    </ng-container >
+</div>

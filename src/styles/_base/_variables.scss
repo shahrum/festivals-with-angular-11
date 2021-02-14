@@ -1,0 +1,336 @@
+//
+// Color system
+//
+
+// stylelint-disable
+$white: #fff !default;
+$gray-100: #f6f6f6 !default;
+$gray-200: #f7f8f9 !default;
+$gray-300: #dfe6e9 !default;
+$gray-400: #c9d1d3 !default;
+$gray-500: #9cafb6 !default;
+$gray-600: #707086 !default;
+$gray-700: #51585b !default;
+$gray-800: #353947 !default;
+$black: #000 !default;
+
+$grays: () !default;
+$grays: map-merge(
+	(
+		"100": $gray-100,
+		"200": $gray-200,
+		"300": $gray-300,
+		"400": $gray-400,
+		"500": $gray-500,
+		"600": $gray-600,
+		"700": $gray-700,
+		"800": $gray-800,
+	),
+	$grays
+);
+
+$blue: #ab7aff !default;
+$blue-light: #b28fff !default;
+$blue-dark: #9668fc !default;
+
+$indigo: #6610f2 !default; // TODO
+
+$purple: #470a68 !default;
+$purple-light: #753ba8 !default;
+$purple-dark: #572c7c !default;
+
+$pink: #ff4c65 !default;
+$pink-light: #fc637d !default;
+$pink-dark: #fc637d !default;
+$pink-shadow: #dd4056 !default;
+
+$red: #dc3545 !default;
+
+$orange: #ffbf5a !default;
+$orange-light: #ffd092 !default;
+$orange-dark: #ffa733 !default;
+
+$yellow: #fcf032 !default;
+$yellow-light: #fffa6f !default;
+$yellow-dark: #ffe74a !default;
+$yellow-shadow: #efb252 !default;
+
+$green: #0ee2b9 !default;
+$green-light: #2df7d0 !default;
+$green-dark: #2df7d0 !default;
+$green-shadow: #00c397 !default;
+
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+$eminence: #5f2a85 !default;
+
+$colors: () !default;
+$colors: map-merge(
+	(
+		"blue": $blue,
+		"indigo": $indigo,
+		"purple": $purple,
+		"pink": $pink,
+		"red": $red,
+		"orange": $orange,
+		"yellow": $yellow,
+		"green": $green,
+		"teal": $teal,
+		"cyan": $cyan,
+		"white": $white,
+		"gray": $gray-600,
+		"gray-dark": $gray-800,
+	),
+	$colors
+);
+
+$primary: $green !default;
+$secondary: $gray-800 !default;
+$success: $green !default;
+$info: $blue !default;
+$warning: $orange !default;
+$danger: $pink !default;
+$light: $white !default;
+$dark: $purple !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+	(
+		"primary": $primary,
+		"secondary": $secondary,
+		"success": $success,
+		"info": transparent,
+		"warning": $warning,
+		"danger": $danger,
+		"light": $light,
+		"dark": $dark,
+	),
+	$theme-colors
+);
+// stylelint-enable
+
+$body-bg: $purple !default;
+$body-color: $white !default;
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$base-font-size: 1rem;
+
+$font-family: "Open Sans";
+$font-family-local: "OpenSans";
+$font-path: "/assets/fonts/open-sans/";
+$font-file-name: "open-sans-v15-latin";
+
+$font-file-suffix-light: "-300";
+$font-file-suffix-light-italic: "-300italic";
+$font-file-suffix-regular: "-regular";
+$font-file-suffix-italic: "-italic";
+$font-file-suffix-semi-bold: "-600";
+$font-file-suffix-semi-bold-italic: "-600italic";
+$font-file-suffix-bold: "-700";
+$font-file-suffix-bold-italic: "-700italic";
+$font-file-suffix-extra-bold: "-800";
+$font-file-suffix-extra-bold-italic: "-800italic";
+
+// Links
+//
+// Style anchor elements.
+
+$link-color: #000 !default;
+$link-color-secondary: #66308e !default;
+$link-on-dark-bg-color: $green !default;
+$link-on-light-bg-color: $purple !default;
+
+$link-decoration: underline !default;
+$link-focus-decoration: none !default;
+$link-on-hover-decoration: none !default;
+
+$link-hover-color: $link-color !default;
+
+// Link visited
+$link-visited-color: $link-color !default;
+$link-on-dark-bg-visited-color: $link-on-dark-bg-color !default;
+$link-on-light-bg-visited-color: $link-on-light-bg-color !default;
+
+$link-secondary-decoration: $link-decoration !default;
+$link-secondary-hover-color: $link-color-secondary !default;
+$link-secondary-hover-decoration: $link-on-hover-decoration !default;
+
+$link-on-dark-bg-decoration: $link-decoration !default;
+$link-on-dark-bg-hover-color: $link-on-dark-bg-color !default;
+$link-on-dark-bg-hover-decoration: $link-on-hover-decoration !default;
+
+// Paragraphs
+//
+// Style p element.
+
+$paragraph-font-size: $base-font-size * 1.6;
+$paragraph-margin-bottom: 3rem !default;
+$paragraph-last-margin-bottom: 0 !default;
+
+// Fonts for headings
+
+$text-font-family: "Gilroy";
+$form-field-font-family: "Gilroy";
+$yes-no-button-font-family: "Gilroy";
+$heading-font-family: "Gilroy";
+$heading-font-family-local: "Gilroy";
+$heading-font-path: "/assets/fonts/gilroy/";
+$heading-font-file-name: "Gilroy";
+
+$heading-font-file-suffix-ultra-light: "-UltraLight";
+$heading-font-file-suffix-ultra-light-italic: "-UltraLightItalic";
+
+$heading-font-file-suffix-light: "-Light";
+$heading-font-file-suffix-light-italic: "-LightItalic";
+
+$heading-font-file-suffix-medium: "-Medium";
+$heading-font-file-suffix-medium-italic: "-zItalic";
+
+$heading-font-file-suffix-regular: "-Regular";
+$heading-font-file-suffix-regular-italic: "-RegularItalic";
+
+$heading-font-file-suffix-semi-bold: "-SemiBold";
+$heading-font-file-suffix-semi-bold-italic: "-SemiBoldItalic";
+
+$heading-font-file-suffix-bold: "-Bold";
+$heading-font-file-suffix-bold-italic: "-BoldItalic";
+
+$heading-font-file-suffix-extra-bold: "-ExtraBold";
+$heading-font-file-suffix-extra-bold-italic: "-ExtraBoldItalic";
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: $font-family, -apple-system, BlinkMacSystemFont,
+	"Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+	"Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+	"Liberation Mono", "Courier New", monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+// stylelint-enable value-keyword-case
+
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-default: $font-size-base * 1.6 !default;
+$font-size-lg: ($font-size-base * 2.6) !default;
+$font-size-sm: ($font-size-base * 0.875) !default;
+
+$font-weight-light: 200 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 600 !default;
+$font-weight-bold: 800 !default;
+$font-weight-bolder: 900 !default;
+
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.88 !default;
+
+$h1-font-size: $font-size-base * 4.8 !default;
+$h2-font-size: $font-size-base * 3.2 !default;
+$h3-font-size: $font-size-base * 2.6 !default;
+$h4-font-size: $font-size-base * 2.2 !default;
+$h5-font-size: $font-size-base * 1.6 !default;
+$h6-font-size: $font-size-base * 2.6 !default;
+$h7-font-size: $font-size-base * 2 !default;
+
+$heading-margin-bottom: 4rem !default;
+$heading-font-family: $heading-font-family !default;
+$heading-font-weight: $font-weight-medium !default;
+$heading-line-height: 1 !default;
+$heading-color: inherit !default;
+$heading-on-light-bg-color: $dark;
+$heading-colored-color-on-light-bg: $purple;
+$heading-colored-color: $green;
+
+$heading-h1-font-size: $base-font-size * 4.8;
+$heading-h2-font-size: $base-font-size * 3.2;
+$heading-h3-font-size: $base-font-size * 2.6;
+$heading-h4-font-size: $base-font-size * 2.2;
+
+$lead-font-size: ($font-size-base * 1.25) !default;
+$lead-font-weight: 300 !default;
+
+$small-font-size: 80% !default;
+
+$hr-border-color: rgba($black, 0.1) !default;
+$hr-border-in-default-section: rgba($white, 0.7) !default;
+$hr-border-width: 2px !default;
+// $hr-margin-y: $spacer !default;
+$hr-margin-bottom: 4rem !default;
+
+$kbd-box-shadow: inset 0 -0.1rem 0 rgba($black, 0.25) !default;
+$nested-kbd-font-weight: $font-weight-bold !default;
+
+$list-inline-padding: 0.5rem !default;
+
+$mark-bg: #fcf8e3 !default;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$enable-grid-classes: true !default;
+
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1140px,
+) !default;
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+) !default;
+
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+	(
+		0: 0,
+		1: (
+			$spacer * 0.25,
+		),
+		2: (
+			$spacer * 0.5,
+		),
+		3: $spacer,
+		4: (
+			$spacer * 1.5,
+		),
+		5: (
+			$spacer * 3,
+		),
+	),
+	$spacers
+);
+
+$headings-margin-bottom: ($spacer / 2) !default;
+
+$dt-font-weight: $font-weight-bold !default;
+
+// Custom Colors
+
+$custom-error-color: #e10101;
+$custom-placeholder-color: #8d8d8d;
+$custom-form-label-color: #697379;
+
+$custom-legal-note-color: #2e2e2e;
+$custom-field-extra-label-color: #1e1e1e;
+$progress-header-color: #400b5d;
+$progress-header-color-inactive: #6a747a;

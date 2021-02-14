@@ -1,0 +1,14 @@
+<nav class="navbar sticky-top navbar-light bg-light">
+  <div class="container-fluid">
+    <p class="navbar-brand">Festival Web Application</p>
+    <ul class="nav nav-pills">
+        <li *ngFor="let navs of _navItems" class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}"
+            [routerLink]="navs.url">{{navs.path}}</a>
+        </li>
+      </ul>
+  </div>
+</nav>
